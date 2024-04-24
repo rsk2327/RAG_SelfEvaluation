@@ -1,0 +1,873 @@
+question,answer,context,grade,eval_description
+"What is meant by ""computational finance""?","Computational finance refers to the application of computer algorithms and mathematical models to financial problems. It involves using technology to analyze and make decisions in the financial markets. This field combines finance, mathematics, statistics, and computer science.",,Correct,"The answer provides a clear and concise explanation of computational finance, covering its application, use of technology, and the interdisciplinary nature of the field."
+What is meant by 'investor heterogeneity'?,"'Investor heterogeneity' refers to the diversity among investors in terms of their preferences, risk tolerance, investment goals, and strategies. This concept acknowledges that not all investors are the same and that they have varying characteristics that influence their decision-making processes. Understanding investor heterogeneity is crucial for financial professionals to tailor their services and products to meet the needs of different types of investors.",,Correct,"The answer provides a clear and concise explanation of what 'investor heterogeneity' means, highlighting the diversity among investors and the importance of understanding their varying characteristics for financial professionals to cater to their needs."
+What was the revolution witnessed by finance in the mid to later part of the 20th century?,"The revolution witnessed by finance in the mid to later part of the 20th century was the shift towards globalization, deregulation, and the rise of financial technology. This period saw the emergence of new financial instruments, increased interconnectedness of global markets, and the growth of electronic trading platforms. Overall, it marked a significant transformation in the way financial markets operated and interacted on a global scale.",,Correct,"The answer provides a comprehensive explanation of the revolution witnessed by finance in the mid to later part of the 20th century, covering key aspects such as globalization, deregulation, financial technology, new financial instruments, global market interconnectedness, and electronic trading platforms. The response effectively highlights the significant transformation in the operation and interaction of financial markets on a global scale."
+Why do you think financial markets are viewed as interacting groups of learning and boundedly-rational agents?,"Financial markets are viewed as interacting groups of learning and boundedly-rational agents because participants in these markets are constantly learning from past experiences and adjusting their strategies accordingly. Bounded rationality refers to the idea that individuals make decisions based on limited information and cognitive abilities, leading to behaviors that may not always be perfectly rational. This combination of learning and bounded rationality helps explain the dynamics and fluctuations observed in financial markets.",,Correct,The answer provides a clear and concise explanation of why financial markets are viewed as interacting groups of learning and boundedly-rational agents. It effectively highlights the role of learning from past experiences and the concept of bounded rationality in shaping market dynamics.
+Why are the financial markets appealing applications for agent-based methods?,"Financial markets are appealing applications for agent-based methods because experiments can be conducted at reasonable time scales, making it more credible to simulate trading activities. Additionally, financial markets provide large, well-organized datasets that can be easily compared, making them suitable for agent-based explorations. Lastly, the nonlinear nature of financial markets poses a challenge for traditional econometric tools, making agent-based methods a valuable approach for modeling and forecasting market behavior.","behavior. Several of the models covered here have already done this, and more examples of using experiments
+are given in Duﬀy (2005). Finance experiments are particularly appealing since they often can be done at
+time scales that are reasonable for the real data. It is more credible that you can simulate a day of trading
+in the laboratory, than to simulate someone’s entire life cycle.
+To summarize, ﬁnancial markets are particularly well suited for agent-based explorations. They are
+large well-organized markets for trading securities which can be easily compared. Currently, the established
+theoretical structure of market eﬃciency and rational expectations is being questioned. There is a long list of
+empirical features that traditional approaches have not been able to match. Agent-based approaches provide
+an intriguing possibility for solving some of these puzzles.21Finally, ﬁnancial markets are rich in data sets
+
+ ------------oﬀ unstable trajectories. As is well known, nonlinear systems can also be diﬃcult to forecast, and most of
+the markets described here share this feature. Unfortunately, this may also make them diﬃcult to estimate
+using traditional econometric tools. Agent-based modelers should be aware of these nonlinear issues, and
+take them into account when evaluating market simulations.
+Financial markets are an important challenge for agent-based computational modelers. Financial markets
+may be one of the important early areas where agent-based methods show their worth, for two basic reasons.
+41",Correct,"The answer provides a clear explanation of why financial markets are appealing applications for agent-based methods. It highlights the ability to conduct experiments at reasonable time scales, access to large datasets, and the challenge posed by the nonlinear nature of financial markets for traditional econometric tools."
+What are the different design questions in constructing an agent-based financial market?,"The different design questions in constructing an agent-based financial market include determining the economic environment, types of securities traded, and modeling the macro economy. These questions are complex and challenging, especially in crafting worlds of heterogeneous agents. The design of preferences is crucial but lacks clear guidance in agent-based modeling.","The remainder of this chapter will summarize recent work on agent-based computational models in
+ﬁnance. The next section introduces some of the computational tools and design issues that are important
+in building markets. Section 3 covers artiﬁcial market models that attempt to recreate an entire market.
+Section 4 covers a few other types of markets which do not ﬁt into the earlier categories. Section 5 covers
+some on-going debates and criticisms of agent-based markets, and section 6 concludes and suggests questions
+for the future.
+2 Design questions
+In constructing an agent-based ﬁnancial market the researcher is faced with a large number of basic design
+questions that must be answered. Unfortunately, there is often little guidance on which direction to follow.
+This section brieﬂy overviews most of these questions which will be seen again as the setup of diﬀerent
+markets is covered in later parts of this survey.
+
+ ------------This section brieﬂy overviews most of these questions which will be seen again as the setup of diﬀerent
+markets is covered in later parts of this survey.
+Probably the most important question is the design of the economic environment itself. What types of
+securities will be traded? Will there be some kind of fundamental value, and how does this move? Is there
+an attempt to model a large subset of the macro economy or just a very speciﬁc ﬁnancial market? As in any
+economic modeling situation these are not easy questions. In the case of agent-based models they are often
+more complicated, since the accepted knowledge of how to craft good and interesting worlds of heterogeneous
+agents is still not something economists are very good at. It is not clear that the knowledge base for building
+representative agent macro economies will necessarily carry over into the agent-based world. This design
+question is probably the most important, and the most diﬃcult to give guidance on.
+2.1 Preferences",Correct,"The answer provides a comprehensive list of different design questions involved in constructing an agent-based financial market. It also highlights the complexity and challenges faced in crafting worlds of heterogeneous agents. Additionally, it mentions the importance of preferences in agent-based modeling."
+Discuss Lettau’s framework using various mathematical formulae.,"Lettau's framework involves using the optimal linear functional form for agent i, which is represented by the formula si=αi(¯d−p). Agents need to learn the optimal α for their portfolios. The genetic algorithm is used to estimate fitness values for each agent over a period of time.","but Lettau simpliﬁes this by using the optimal linear functional form for agent i,
+si=αi(¯d−p). (7)
+This gives the agents a head start on the portfolio problem, but they still need to learn the optimal α.28
+The market is run for Speriods with new independent draws of the dividend for each period. Each agent
+continues to use the portfolio determined by αi, which remains ﬁxed. At the end of each block of Sthe
+genetic algorithm (GA) is run, and the set of agent parameters is redrawn. Agents are parameterized with
+a bitstring encoding given by
+αi=MIN + (MAX −MIN )∑L
+j=1µj,i2j−1
+2L−1(8)
+where µj,iis the bitstring for the strategy of agent i. The GA ﬁrst gets a ﬁtness value for each agent estimated
+over the Speriods using
+Vi=S∑
+s=1U(wi,s). (9)
+This sets the ﬁtness to the ex post estimated expected utility over the sample. A new population is chosen
+using a technique known as “ﬁtness proportional” selection. Each agent is assigned a probability using
+pi=1/Vi∑J
+j=1(1/Vj). (10)
+
+ ------------Given the normally distributed dividend process, there is a well-known optimal solution to the portfolio
+problem given by,
+s∗=α∗(¯d−p) (4)
+α∗=1
+γσ2
+d(5)
+where σ2
+dis the variance of the random dividend payout. The main exercise in Lettau’s paper is to see if and
+when agents are able to learn this optimal portfolio strategy using a genetic algorithm. In general, agents’
+policy functions could take the form of
+s=s(¯d, p), (6)
+13",Correct,"The student has provided a clear explanation of Lettau's framework, including the optimal linear functional form and the use of genetic algorithm to estimate fitness values. The answer demonstrates understanding of the topic."
+The exchange rate is given by what formula?,"The exchange rate is given by et=p1,t/p2,t. Agents' maximization problem yields demand for savings st=m1,t/p1,t+m2,t/p2,t=1/2(w1−w2)Rt. The final exchange rate depends on the starting value in certain learning algorithms.","good, which has a price in each currency. The exchange rate is given by
+et=p1,t
+p2,t. (11)
+Given this setup, all agents care about in terms of money holdings are the relative returns of the two
+currencies. In an equilibrium where both currencies are held, these returns must be equal.
+Rt=p1,t
+p1,t+1=p2,t
+p2,t+1. (12)
+It is also easy to show that the agents’ maximization problem yields the following demand for savings:
+st=m1,t
+p1,t+m2,t
+p2,t=1
+2(w1−w21
+Rt) (13)
+The model has a fundamental indeterminacy in that, if there exists one price series and an exchange
+rate paring that constitutes an equilibrium, then there will exist inﬁnitely many such equilibria. One of
+the interesting issues that Arifovic is exploring is whether the GA learning mechanism will converge to a
+single exchange rate. Sargent (1993) explored this same question; he found that certain learning algorithms
+converge, but the ﬁnal exchange rate depends on the starting value.
+
+ ------------single exchange rate. Sargent (1993) explored this same question; he found that certain learning algorithms
+converge, but the ﬁnal exchange rate depends on the starting value.
+The multi-agent model is set up with a population of agents in each generation. Agents are represented
+with a bitstring which represents both their ﬁrst period consumption decision, and the fraction of their
+savings to put into currency 1. A bitstring of length 30 is divided as 20 binary bits for consumption in
+period 1, and 10 for the fraction of savings put into currency 1. These two values completely determine a
+period 1 agent’s behavior through life. The price level in this model is determined endogenously. The agent
+bitstings determine their desired real savings in each currency, which gives the aggregate demand for real
+balances in the two currencies. Nominal currency supplies are given, so this determines the price level in",Incorrect,"The answer provided is not relevant to the question asked. It includes unrelated information about agents' maximization problem and learning algorithms, which are not related to the formula for calculating the exchange rate."
+Discuss the criticisms of agent-based markets.,"Agent-based markets have been criticized for having too many parameters with unclear impacts. Some models assume a small number of assets, limiting the complexity of trading strategies. The issue of detecting arbitrage opportunities with nonlinear strategies remains a significant concern for modelers.","numbers are, but this is an interesting test of the minority game model on real data.54
+5 Cautions and criticisms
+Agent-based markets have been criticized from many diﬀerent angles. The most common criticism is that the
+models have far too many parameters, and the impact of many of these parameters is not well understood.
+This issue has already been discussed in the section on calibration. However, beyond simple parameter
+questions, these models have made use of a wide selection of the available computational tools and methods.
+Table 1 gives a short overview of the design structures of some of the agent-based ﬁnancial market models
+described in this paper. This is far from being an all inclusive list, since many of the models described in this
+chapter would not ﬁt well into the criteria for the list. This emphasizes what should have become clear from
+the earlier sections: agent-based ﬁnancial models have been built using many diﬀerent features and designs.
+
+ ------------arbitrage opportunities for new trading strategies to exploit. However, there is a possibility that more
+complex nonlinear strategies could detect such opportunities. Arifovic (2001) is an example testing this sort
+of issue, and ﬁnds that the more complicated agents do not do better in her simulated market environment.
+This problem is still one of the most important for agent-based modelers to worry about, and no one should
+feel immune to this criticism.
+Another very common and pertinent criticism is that most agent-based ﬁnancial market models assume a
+small number of assets. Often agents trade only one risky asset, and one risk-free asset alone.55It is certainly
+true that, with all of the new methodological tools in use in these models, it was important to start with
+the simplifying case of one risky and one risk-free asset. However, this simpliﬁcation may eliminate many
+interesting features. The criticisms of models with a single representative agent may carry over equally well",Correct,"The answer provides a clear and concise explanation of the criticisms of agent-based markets, highlighting the issues related to parameters, asset limitations, and detecting arbitrage opportunities with nonlinear strategies."
+How is timing an ignored final problem?,"Timing is an important factor in determining results, especially in scenarios like delayed price adjustments in markets. The impact of timing decisions can be significant in a world of evolving strategies. The rationale for imposing time limits on complaint handling processes may not always be clear.","make these choices, but in analytic settings more events can be assumed to take place simultaneously. In
+the computer this sequence of events often needs to be spelled out. The degree to which results depend on
+arbitrary timing decisions is deﬁnitely important. One example that has been discussed here is the delayed
+price adjustment approach, where prices are adjusted based on current excess demand in the market. It
+is important to note that in a world of evolving strategies, this timing may have a large impact since the
+39
+
+ ------------Maurice Blackburn Lawyers submission to the National Inquiry into Sexual Harassment in Australian Workplaces . 
+Page 10 
+ There is no sound policy reason for the new time limit . 
+ 
+At the time the Amendment was passed, there was no clear policy rationale put forward 
+by the legislature for the change to the time limit, save for the apparent need to mitigate 
+unmeritorious  or vexatious  claims being made14.  
+ 
+The JPC Inquiry recommended that the AHRC adopt time limits for the processes related 
+to complaint handling  activities at the initial assessment of the complaint15. However, this 
+recommendation did not extend to reducing the time limit a complainant has to lodge a 
+complaint16.  
+ 
+Indeed, the JPC Inquiry made a number of recommendations in relation to expanding the  
+President’s power to terminate a complaint pursuant to s46PH of the Act. Notably, none 
+of these recommendations related to reducing the time limit available to complainants for 
+lodging a complaint.",Incorrect,"The answer does not directly address the question asked. It discusses the importance of timing in decision-making processes, but does not explain how timing can be an ignored final problem. Additionally, the response lacks clarity and coherence."
+What is the earliest that I can depart from Downtown on the Express Bus?,The Express bus leaves Downtown at 6:30 PM on Wednesday after your last class. This will allow you to meet your friends for dinner at 6 PM. I don't know the names of the two buildings where your classes will be held.,"the b us at the Downtown Terminal to arrive at the college on time for all classes. Enter 
+the information into the agenda  for each day .  You should arrive at class 15 minutes 
+before it begins.  
+ 
+Task 3:  You are meeting friends  downtown  for dinner at 6 p.m. on Wednesday. What time does 
+the bus leave after your last class on Wednesday  that would allow you to meet your 
+friends on time ?  
+ 
+ 
+Task 4:  Name the two building s where  your classes will be held according to the class schedule.
+
+ ------------Transition Task: Prepared for the Project,  Teaching to Fish (Build Tasks) Integrating OALCF Task 
+Development within Ontario’s Literacy Programs  (2014)  
+ 
+7 
+ Task 2:  Using the Ex press and Regular bus schedules, locate the times that you will be catching the bus 
+at the Downtown Terminal to arrive at the college on time for all classes. Enter the information 
+into the agenda for each day.  You should arrive at class 15 minutes before it begins.  
+Monday  Tuesday   Wednesday  Thursday  Friday  
+7 Regular bus - 6:40  7 Regular bus - 6:40  7 Regular bus – 10:40  7 Regular bus – 8:40  7 Regular bus - 6:40  
+ Express bus – 6:30   Express bus – 6:30   Express bus – 10:30   Express bus – 8:30   Express bus – 6:30  
+8 Laws 30 -CO1  8 Laws 79 -CO1  8  8  8 Laws 32 -CO1  
+          
+9  9  9  9  9  
+          
+10  10 Laws 79 -SO1  10  10 FLPL 45 -CO1  10  
+         Recr 9 -LO1  
+11 Laws 32 -SO1  11  11  11  11  
+          
+12  12 Soci 50 -SO1  12 Laws 18 -CO1  12 Laws 83 -CO1  12",Incorrect,The answer provided does not directly address the question asked. The student should focus on providing the specific time of departure for the Express Bus from Downtown.
+Is it a departure from the College stop after 5:00 pm?,The bus leaves the college at 5:20 pm after your last class on Wednesday. The two locations where your classes will be held are Brealey and PTBO Sport and Wellness Centre.,"the b us at the Downtown Terminal to arrive at the college on time for all classes. Enter 
+the information into the agenda  for each day .  You should arrive at class 15 minutes 
+before it begins.  
+ 
+Task 3:  You are meeting friends  downtown  for dinner at 6 p.m. on Wednesday. What time does 
+the bus leave after your last class on Wednesday  that would allow you to meet your 
+friends on time ?  
+ 
+ 
+Task 4:  Name the two building s where  your classes will be held according to the class schedule.
+
+ ------------10  10 Laws 79 -SO1  10  10 FLPL 45 -CO1  10  
+         Recr 9 -LO1  
+11 Laws 32 -SO1  11  11  11  11  
+          
+12  12 Soci 50 -SO1  12 Laws 18 -CO1  12 Laws 83 -CO1  12  
+          
+1  1  1  1  1  
+          
+2  2  2  2 Laws 18 -SO1  2  
+     RecR 9 -L01      
+3  3  3  3  3  
+          
+4  4  4 Laws 83 -SO1  4  4  
+          
+5  5  5  5  5  
+          
+6  6  6  6  6  
+          
+ Evening   Evening   Evening   Evening   Evening  
+ 
+Task 3:  You are meeting friends  downtown for dinner at 6 p .m. on Wednesday. What time does the bus 
+leave the college after your last class on Wednesday?  
+The bus leaves at 5:20 pm  
+ 
+Task 4:   Name the two locations where your classes will be held according to the class schedule.  
+Brealey and PTBO Sport and Wellness Centre",Incorrect,"The answer provided does not directly address the question asked. It provides information about class locations and timing, but does not confirm if there is a departure from the College stop after 5:00 pm."
+What are the destinations of the express bus?,The destinations of the express bus are the college and the Downtown Terminal. I don't know the specific buildings where the classes will be held.,"the b us at the Downtown Terminal to arrive at the college on time for all classes. Enter 
+the information into the agenda  for each day .  You should arrive at class 15 minutes 
+before it begins.  
+ 
+Task 3:  You are meeting friends  downtown  for dinner at 6 p.m. on Wednesday. What time does 
+the bus leave after your last class on Wednesday  that would allow you to meet your 
+friends on time ?  
+ 
+ 
+Task 4:  Name the two building s where  your classes will be held according to the class schedule.
+
+ ------------Transition Task: Prepared for the Project,  Teaching to Fish (Build Tasks) Integrating OALCF Task 
+Development within Ontario’s Literacy Programs  (2014)  
+ 
+7 
+ Task 2:  Using the Ex press and Regular bus schedules, locate the times that you will be catching the bus 
+at the Downtown Terminal to arrive at the college on time for all classes. Enter the information 
+into the agenda for each day.  You should arrive at class 15 minutes before it begins.  
+Monday  Tuesday   Wednesday  Thursday  Friday  
+7 Regular bus - 6:40  7 Regular bus - 6:40  7 Regular bus – 10:40  7 Regular bus – 8:40  7 Regular bus - 6:40  
+ Express bus – 6:30   Express bus – 6:30   Express bus – 10:30   Express bus – 8:30   Express bus – 6:30  
+8 Laws 30 -CO1  8 Laws 79 -CO1  8  8  8 Laws 32 -CO1  
+          
+9  9  9  9  9  
+          
+10  10 Laws 79 -SO1  10  10 FLPL 45 -CO1  10  
+         Recr 9 -LO1  
+11 Laws 32 -SO1  11  11  11  11  
+          
+12  12 Soci 50 -SO1  12 Laws 18 -CO1  12 Laws 83 -CO1  12",Incorrect,"The answer correctly identifies the destinations of the express bus, but fails to provide complete information as it does not mention the specific buildings where the classes will be held."
+at what time is the last opportunity someone could take the express bus from the college campus to downtown?,"The last opportunity to take the express bus from the college campus to downtown on Wednesday is at 10:30 AM. 
+The two buildings where your classes will be held are Laws 79 and FLPL 45. 
+I don't know the exact time the bus leaves after your last class on Wednesday to meet your friends for dinner at 6 PM.","the b us at the Downtown Terminal to arrive at the college on time for all classes. Enter 
+the information into the agenda  for each day .  You should arrive at class 15 minutes 
+before it begins.  
+ 
+Task 3:  You are meeting friends  downtown  for dinner at 6 p.m. on Wednesday. What time does 
+the bus leave after your last class on Wednesday  that would allow you to meet your 
+friends on time ?  
+ 
+ 
+Task 4:  Name the two building s where  your classes will be held according to the class schedule.
+
+ ------------Transition Task: Prepared for the Project,  Teaching to Fish (Build Tasks) Integrating OALCF Task 
+Development within Ontario’s Literacy Programs  (2014)  
+ 
+7 
+ Task 2:  Using the Ex press and Regular bus schedules, locate the times that you will be catching the bus 
+at the Downtown Terminal to arrive at the college on time for all classes. Enter the information 
+into the agenda for each day.  You should arrive at class 15 minutes before it begins.  
+Monday  Tuesday   Wednesday  Thursday  Friday  
+7 Regular bus - 6:40  7 Regular bus - 6:40  7 Regular bus – 10:40  7 Regular bus – 8:40  7 Regular bus - 6:40  
+ Express bus – 6:30   Express bus – 6:30   Express bus – 10:30   Express bus – 8:30   Express bus – 6:30  
+8 Laws 30 -CO1  8 Laws 79 -CO1  8  8  8 Laws 32 -CO1  
+          
+9  9  9  9  9  
+          
+10  10 Laws 79 -SO1  10  10 FLPL 45 -CO1  10  
+         Recr 9 -LO1  
+11 Laws 32 -SO1  11  11  11  11  
+          
+12  12 Soci 50 -SO1  12 Laws 18 -CO1  12 Laws 83 -CO1  12",Incorrect,"The answer provided does not directly address the question asked. The student mentioned the last opportunity on Wednesday at 10:30 AM, but the question was about the last opportunity in general. Additionally, irrelevant information about class buildings and meeting friends for dinner was included."
+What was the gross profit of three months ended in 2013?,The gross profit for the three months ended in 2013 is not provided in the given context.,"and an increase of $3.8 million  from the second quarter of 2013 due to higher payroll largely attributable to the 
+expansion of our sales force and marketing team to serve the C&I channel, increased marketing costs, and share -based 
+compensation expenses for new awards granted in connection with the IPO. 
+●Net income was $2.0 million , a decrease from $3.9 million  in the first quarter of 2014 and a decrease from $4.6 million  in 
+the second quarter of 2013.  Diluted earnings per share were $0.10, a decrease from diluted earnings per share of 
+$0.19 in the first quarter of 2014 and a decrease from diluted earnings per share of $0.22 in the second quarter of 2013.
+●Adjusted EBITDA was $7.7 million , compared to $10.0 million  in the first quarter of 2014 and $12.4 million  in the second 
+quarter of 2013.
+At June 30, 2014 , cash and cash equivalents were $16.1 million , down from $23.0 million  at March 31, 2014 . On July 1, 2014 ,
+
+ ------------$18.2 million , or 65%, from the second quarter of 2013, driven by increased sales in the commercial and industrial, 
+or C&I, channel and with Walmart.
+●CFL sales were $59.5 million , roughly flat from the first quarter of 2014 and down $12.4 million , or 17%, from the 
+second quarter of 2013, primarily due to the transition to LEDs in the C&I channel and lower volume with The 
+Home Depot. 
+●Gross margin was 22.7%, down from 24.5% in the first quarter of 2014 and down from 24.3% in the second quarter of 
+2013 due to the absence of favorable profit margins on a one -time order in 2013 and an increase in the provision for 
+excess and obsolete inventory.   
+●Selling, general and administrative expenses were $20.4 million , an increase of $3.5 million  from the first quarter of 2014 
+and an increase of $3.8 million  from the second quarter of 2013 due to higher payroll largely attributable to the",Incorrect,The answer does not directly address the question asked. It should provide the specific gross profit amount for the three months ended in 2013.
+How much percentage difference of goods sold between the six months and three months ended is?,"The percentage difference of goods sold between the six months and three months ended is 30.6%. This is calculated by comparing the cost of goods sold for the two periods, which were $163,283 for six months and $112,464 for three months.","$18.2 million , or 65%, from the second quarter of 2013, driven by increased sales in the commercial and industrial, 
+or C&I, channel and with Walmart.
+●CFL sales were $59.5 million , roughly flat from the first quarter of 2014 and down $12.4 million , or 17%, from the 
+second quarter of 2013, primarily due to the transition to LEDs in the C&I channel and lower volume with The 
+Home Depot. 
+●Gross margin was 22.7%, down from 24.5% in the first quarter of 2014 and down from 24.3% in the second quarter of 
+2013 due to the absence of favorable profit margins on a one -time order in 2013 and an increase in the provision for 
+excess and obsolete inventory.   
+●Selling, general and administrative expenses were $20.4 million , an increase of $3.5 million  from the first quarter of 2014 
+and an increase of $3.8 million  from the second quarter of 2013 due to higher payroll largely attributable to the
+
+ ------------Additional paid -in capital 2,553 901
+Accumulated other comprehensive income 13,237 13,721
+Retained deficit (28,322) (32,490)
+Total shareholders' equity 9,516 4,180
+Total liabilities and shareholders' equity $   355,866 $   341,265
+TCP INTERNATIONAL HOLDINGS LTD.  AND SUBSIDIARIES
+Condensed Consolidated Statements of Comprehensive Income 
+(Unaudited)
+(Amounts in thousands, except per share data)
+Three months ended June 30,  Six months ended June 30,
+2014 2013 2014 2013
+Net sales $   112,464 $   111,157 $   213,581 $   201,451
+Cost of goods sold 86,953 84,150 163,283 153,609
+Gross profit 25,511 27,007 50,298 47,842
+Selling, general and administrative expenses 20,433 16,609 37,396 31,179
+Litigation settlements 90 — 190 — 
+Operating income 4,988 10,398 12,712 16,663
+Other expense (income):
+Interest expense 2,319 1,598 4,626 2,991
+Interest income (38) (166) (65) (264)
+Foreign exchange (gains) losses, net (633) 2,231 (1,307) 4,637
+Income before income taxes 3,340 6,735 9,458 9,299",Correct,The answer provides the correct calculation of the percentage difference of goods sold between the six months and three months ended. It also includes the specific values used in the calculation for clarity.
+In which year were there the greatest total assets?,"The greatest total assets were in the year 2014 with a total of $355,866.","2014 2013
+Assets
+Current assets:
+Cash and cash equivalents $    16,091 $    21,903
+Restricted cash 6,666 3,404
+Accounts receivable, less allowance for doubtful accounts of $1,416 and
+82,634 59,574     $1,479 at June 30, 2014  and December 31, 2013 , respectively
+Inventories 116,872 119,477
+Prepaids and other current assets 18,826 14,415
+Deferred income taxes 9,030 10,551
+Total current assets 250,119 229,324
+Property, plant and equipment, net of accumulated depreciation of $39,965 and
+70,924 74,558    $39,007 at June 30, 2014  and December 31, 2013  respectively
+Land rights, net 4,154 4,244
+Deferred costs 18,364 18,732
+Finance receivables from related parties — 1,915
+Intangible assets, net of accumulated amortization of $861 and $837 at June 30,
+2,826 2,993    2014 and December 31, 2013 , respectively
+Deferred income taxes, long -term 7,772 7,758
+Other long -term assets 1,707 1,741
+Total assets $   355,866 $   341,265
+Liabilities and Shareholders' Equity
+Current liabilities:
+
+ ------------Deferred income taxes, long -term 7,772 7,758
+Other long -term assets 1,707 1,741
+Total assets $   355,866 $   341,265
+Liabilities and Shareholders' Equity
+Current liabilities:
+Short-term loans and current portion of long -term debt $   138,711 $   122,840
+Accounts payable 103,835 105,742
+Accrued expenses and other current liabilities 59,208 62,539
+Total current liabilities 301,754 291,121
+Long-term debt, net of current portion  5,442 7,553
+Income taxes payable, long -term 7,410 7,043
+Legal settlements, net of current portion 31,232 30,941
+Other long -term liabilities  512 427
+Total liabilities 346,350 337,085
+Commitments and contingencies
+Shareholders' equity:
+Common stock, CHF 1.00 par value; 41,107 shares authorized; 20,553
+22,048 22,048    issued and outstanding at June 30, 2014  and December 31 , 2013 
+Additional paid -in capital 2,553 901
+Accumulated other comprehensive income 13,237 13,721
+Retained deficit (28,322) (32,490)
+Total shareholders' equity 9,516 4,180",Correct,"The answer provided correctly identifies the year 2014 as having the greatest total assets with a specific amount of $355,866."
+In which year were there the greatest total liabilities?,"In 2014, the greatest total liabilities were $346,350.","Deferred income taxes, long -term 7,772 7,758
+Other long -term assets 1,707 1,741
+Total assets $   355,866 $   341,265
+Liabilities and Shareholders' Equity
+Current liabilities:
+Short-term loans and current portion of long -term debt $   138,711 $   122,840
+Accounts payable 103,835 105,742
+Accrued expenses and other current liabilities 59,208 62,539
+Total current liabilities 301,754 291,121
+Long-term debt, net of current portion  5,442 7,553
+Income taxes payable, long -term 7,410 7,043
+Legal settlements, net of current portion 31,232 30,941
+Other long -term liabilities  512 427
+Total liabilities 346,350 337,085
+Commitments and contingencies
+Shareholders' equity:
+Common stock, CHF 1.00 par value; 41,107 shares authorized; 20,553
+22,048 22,048    issued and outstanding at June 30, 2014  and December 31 , 2013 
+Additional paid -in capital 2,553 901
+Accumulated other comprehensive income 13,237 13,721
+Retained deficit (28,322) (32,490)
+Total shareholders' equity 9,516 4,180
+
+ ------------2014 2013
+Assets
+Current assets:
+Cash and cash equivalents $    16,091 $    21,903
+Restricted cash 6,666 3,404
+Accounts receivable, less allowance for doubtful accounts of $1,416 and
+82,634 59,574     $1,479 at June 30, 2014  and December 31, 2013 , respectively
+Inventories 116,872 119,477
+Prepaids and other current assets 18,826 14,415
+Deferred income taxes 9,030 10,551
+Total current assets 250,119 229,324
+Property, plant and equipment, net of accumulated depreciation of $39,965 and
+70,924 74,558    $39,007 at June 30, 2014  and December 31, 2013  respectively
+Land rights, net 4,154 4,244
+Deferred costs 18,364 18,732
+Finance receivables from related parties — 1,915
+Intangible assets, net of accumulated amortization of $861 and $837 at June 30,
+2,826 2,993    2014 and December 31, 2013 , respectively
+Deferred income taxes, long -term 7,772 7,758
+Other long -term assets 1,707 1,741
+Total assets $   355,866 $   341,265
+Liabilities and Shareholders' Equity
+Current liabilities:",Incorrect,"The answer provided is incorrect as it only mentions the amount of total liabilities in 2014, but does not specify the year with the greatest total liabilities. The question asks for the specific year with the greatest total liabilities, not just the amount."
+How varied were the subjects of the different Oregon section meetings?,"The subjects of the different Oregon section meetings varied, including presentations on the Columbia River Crossing project, announcements of newly elected officers, and joint meetings with other professional societies. The Oregon Section also helped arrange the 2007 District 6 meeting, which was combined with the Quad Conference to expand the reach of the event. The meetings included luncheons with speakers, joint-meetings, the annual traffic bowl, and a technical workshop.","Oregon Section 2007/2008 Annual Report  
+Institute of Transportation Engineers  Page 7 of 13  5.  MEETINGS  
+The Oregon Section conducted six (6) general meetings and the sum mer golf tournament over the 
+past year, as well as hosting Joint 2007 ITE District 6 annual me eting. The general meetings included 
+luncheons with speakers, joint-meetings with other professional s ocieties, the annual traffic bowl, and 
+a technical workshop. The table below summarizes the general meet ings conducted over the past year 
+and those scheduled for the remainder of 2008.   
+SOREGON SECTION MEETINGS 
+Date Meeting Subject Location Attendees 
+4-10-07 April - Joint 
+meeting with 
+WTS Kris Strickler and Danielle Cogan gave a 
+presentation on the Columbia River Crossing 
+project on the I-5 bridge that connects Oregon 
+and Washington. Embassy Suites 
+Hotel 
+Portland, OR 60 
+5-18-07 May - Joint 
+meeting with 
+Oregon Traffic 
+Control Devices 
+Committee 
+(OTCDC) Sections newly elected officers were announced
+
+ ------------Western Systems and NW Signal sponsored the event. 
+ 
+Speaker Appreciation Gifts: 
+It is the Oregon Section’s tradition to recognize the speaker a t the Monthly Section Meetings and 
+various other guests of the Section by presenting them with a token gift. USB thumb drives printed 
+with an Oregon ITE logo were purchased as speaker gifts this year, as were handmade coffee mugs 
+with the Oregon ITE logo. 
+ 
+District 6 Meeting - Local Arrangements Committee: 
+The Oregon Section helped arrange the 2007 District 6 (now Western District) m eeting that was held 
+July 15 to 18 in Portland.  This meeting was combined with the Quad Conference to expand  the reach 
+of this event to our friends in Vancouver, BC. The Quad meeting was originally s cheduled to take 
+place in 2008 in Portland, but the Oregon Section swapped meeting years with the  Vancouver Island 
+Section in order to better coordinate the district and quad meetings (a w in-win situation for both 
+Sections).",Correct,"The answer provides a detailed explanation of the varied subjects covered in the different Oregon section meetings, including specific examples such as the Columbia River Crossing project, newly elected officers, joint meetings with other professional societies, and the 2007 District 6 meeting combined with the Quad Conference. It also mentions specific activities like luncheons with speakers, joint-meetings, the annual traffic bowl, and a technical workshop."
+What is the Oregon Section's annual Traffic Bowl Competition?,"The Oregon Section's annual Traffic Bowl Competition is a Jeopardy-based trivia contest where students from various universities answer questions on traffic and transportation trivia. The competition was held at McMenamin's Edgefield just east of Portland, Oregon. The University of Portland won the grand prize of bragging rights, a trophy, and a $400 scholarship.","Oregon Section 2007/2008 Annual Report  
+Institute of Transportation Engineers  Page 10 of 1 3 7.  STUDENT CHAPTER ACTIVITIES 
+The Student Liaison Committee had another successful year in attracting schools from the Pacific 
+Northwest to compete in the Oregon Section's annual Traffic Bowl Competition. The Traffic Bowl is 
+a Jeopardy-based trivia contest where students must answer ques tions on a variety of traffic and 
+transportation trivia. This year the competition was held on Novem ber 15, 2007 at McMenamin's 
+Edgefield just east of Portland, Oregon.  
+This year we had 52 students from six universities attending the event. Par ticipating schools were: 
+/square4 Portland State University 
+/square4 University of Idaho 
+/square4 University of Portland 
+/square4 Oregon State University 
+/square4 University of Washington 
+/square4 Oregon Institute of Technology 
+ 
+University of Portland took home the grand prize of bragging rights , a trophy and a $400 scholarship
+
+ ------------HDR, IBI Group, JRH Engineering, Kittelson and Associates, Lancaste r Engineering, NWS Traffic 
+Engineering, Parametrix, Quality Counts, TrafStats, URS Corp, W&H Pacific, and Western Systems.  
+The Oregon Section has already secured the room for Traffic Bowl  2008 (November, 2008) at 
+McMenamin’s Edgefield. 
+ 
+This year, students continued to enjoy substantial discounts at  Oregon ITE Section meetings ranging 
+from free (Traffic Bowl) to $5 (Section Meetings) depending on t he actual cost of the event and level 
+of corporate sponsorship.",Correct,"The answer provides a detailed explanation of the Oregon Section's annual Traffic Bowl Competition, including the format, location, and prize. It is well-written and informative."
+The participating schools of the Traffic Bowl Competition were from what all states in the US?,"The participating schools in the Traffic Bowl Competition were from Oregon, Idaho, Washington, and the Oregon Institute of Technology. The competition was held at McMenamin's Edgefield just east of Portland, Oregon. The University of Portland won the grand prize.","Oregon Section 2007/2008 Annual Report  
+Institute of Transportation Engineers  Page 10 of 1 3 7.  STUDENT CHAPTER ACTIVITIES 
+The Student Liaison Committee had another successful year in attracting schools from the Pacific 
+Northwest to compete in the Oregon Section's annual Traffic Bowl Competition. The Traffic Bowl is 
+a Jeopardy-based trivia contest where students must answer ques tions on a variety of traffic and 
+transportation trivia. This year the competition was held on Novem ber 15, 2007 at McMenamin's 
+Edgefield just east of Portland, Oregon.  
+This year we had 52 students from six universities attending the event. Par ticipating schools were: 
+/square4 Portland State University 
+/square4 University of Idaho 
+/square4 University of Portland 
+/square4 Oregon State University 
+/square4 University of Washington 
+/square4 Oregon Institute of Technology 
+ 
+University of Portland took home the grand prize of bragging rights , a trophy and a $400 scholarship
+
+ ------------HDR, IBI Group, JRH Engineering, Kittelson and Associates, Lancaste r Engineering, NWS Traffic 
+Engineering, Parametrix, Quality Counts, TrafStats, URS Corp, W&H Pacific, and Western Systems.  
+The Oregon Section has already secured the room for Traffic Bowl  2008 (November, 2008) at 
+McMenamin’s Edgefield. 
+ 
+This year, students continued to enjoy substantial discounts at  Oregon ITE Section meetings ranging 
+from free (Traffic Bowl) to $5 (Section Meetings) depending on t he actual cost of the event and level 
+of corporate sponsorship.",Correct,"The answer provides a detailed list of states from which the participating schools in the Traffic Bowl Competition were from, along with additional information about the competition location and the grand prize winner. Well done."
+How do you think the donations from the local companies help in offseting the cost of the student meals and scholarships in the competition?,"Donations from local companies help offset the cost of student meals and scholarships by providing financial support for student attendance. Several companies donated funds to support student attendance at the event, which helped cover the expenses of meals and scholarships. The donations from local companies contributed to reducing the financial burden of student meals and scholarships in the competition.","/square4 University of Washington 
+/square4 Oregon Institute of Technology 
+ 
+University of Portland took home the grand prize of bragging rights , a trophy and a $400 scholarship 
+award. University of Washington and Oregon Institute of Technology  both received $300 for tying 
+for second place.  The remaining three participating schools rec eived a $150 participation award.  All 
+of the student attendees received a free dinner at this ev ent. In order to offset the cost of the student 
+meals and scholarships, several local companies donated funds to  support student attendance. 
+Donations were received from: Advanced Traffic Products, CH2M Hil l, City of Gresham, City of 
+Portland, Coral Sales Company, David Evans and Associates, DKS As sociates, Group Mackenzie, 
+HDR, IBI Group, JRH Engineering, Kittelson and Associates, Lancaste r Engineering, NWS Traffic 
+Engineering, Parametrix, Quality Counts, TrafStats, URS Corp, W&H Pacific, and Western Systems.
+
+ ------------Oregon ITE Meetings and Workshops:  $8,929.53 
+ 
+District 6 Meeting $1,311.66 
+Donations:  $1,450 (Including Traffic Bowl prizes to student chapters) 
+Internet Expenses:  $234.00  
+Other Expenditures:  $382.25 (Board Meetings) 
+Golf Tournament:  $5,754.82 
+Miscellaneous:  $284.89 (PO box, election costs, etc.) 
+Total Expenditures:   $18,347.15 
+Balance of Funds on hand at the End of the Reporting Period (March 31, 2008) :  
+$26,515.21 ($26,394.71 in Bank Account + $120.50 in Petty Cash) 
+ 
+Was there a change in the Section Bylaws during this reporting period? 
+No",Correct,The answer provides a clear explanation of how donations from local companies help offset the cost of student meals and scholarships in the competition. It effectively highlights the financial support provided by the companies and how it contributes to reducing the financial burden on students.
+Discuss the Oregon Section's website.,"The Oregon Section's website, www.oregonite.org, was dynamic and modified to meet the changing needs of the Section. It included information on meetings, activities, officer contact details, conferences, job listings, and section news. Online registration for meetings was popular and effective, providing registration lists, name badges, and written receipts electronically.","Oregon Section 2007/2008 Annual Report  
+Institute of Transportation Engineers  Page 11 of 1 3 8.  OTHER ACTIVITIES  
+Webmaster Report : 
+This year the Oregon Section retained the domain na me, www.oregonite.org . The website remained very 
+dynamic and was modified significantly to reflect t he changing needs of the Section. The web page incl udes 
+information about meetings, activities, officer con tact information, upcoming conferences, available j obs, 
+and section news. The site always has the current a nd upcoming meeting information posted, and on-line  
+registration for Section meetings continued to be b oth popular and successful.  In addition, electroni c 
+download of the registration information were used to produce the registration list, name badges and w ritten 
+receipts for any specific event. This form of regis tration has proven to be very effective and user fr iendly for 
+members. 
+ 
+Annual Golf Tournament:
+
+ ------------Oregon Section 2007/2008 Annual Report  
+Institute of Transportation Engineers  Page 7 of 13  5.  MEETINGS  
+The Oregon Section conducted six (6) general meetings and the sum mer golf tournament over the 
+past year, as well as hosting Joint 2007 ITE District 6 annual me eting. The general meetings included 
+luncheons with speakers, joint-meetings with other professional s ocieties, the annual traffic bowl, and 
+a technical workshop. The table below summarizes the general meet ings conducted over the past year 
+and those scheduled for the remainder of 2008.   
+SOREGON SECTION MEETINGS 
+Date Meeting Subject Location Attendees 
+4-10-07 April - Joint 
+meeting with 
+WTS Kris Strickler and Danielle Cogan gave a 
+presentation on the Columbia River Crossing 
+project on the I-5 bridge that connects Oregon 
+and Washington. Embassy Suites 
+Hotel 
+Portland, OR 60 
+5-18-07 May - Joint 
+meeting with 
+Oregon Traffic 
+Control Devices 
+Committee 
+(OTCDC) Sections newly elected officers were announced",Correct,"The answer provides a detailed overview of the Oregon Section's website, highlighting its dynamic nature and the various information it offers to users. The mention of online registration being popular and effective adds depth to the response."
+What do you know about the 18th annual ITE Golf Tournament?,"The 18th annual ITE Golf Tournament was hosted by the Oregon Section at Quail Valley Golf Course on September 21, 2007, drawing 57 competitors from across the state. The event was held at the Oregon Golf Association (OGA) in Woodburn, Oregon, approximately 30 miles south of Portland. The tournament had good turnout, exceeding the previous year's attendance, and was sponsored by various companies.","receipts for any specific event. This form of regis tration has proven to be very effective and user fr iendly for 
+members. 
+ 
+Annual Golf Tournament:                           
+The Oregon Section hosted its 18th annual ITE Golf Tournament at Quail Valley Golf Course on 
+September 21, 2007. The tournament drew 57 competitors fro m across the state. The golf event was held at 
+Oregon Golf Association (OGA) in Woodburn, Oregon.  This location is approximately 30 miles south of 
+Portland. Turnout was good, exceeding last year’s a ttendance, and it was a fun and entertaining event.  In 
+addition to volunteers, Lancaster Engineering, Davi d Evans & Associates, DKS Associates, Quality 
+Counts, Parsons Brinkerhoff, Inc., Kittelson & Asso ciates, Inc., All Traffic Data Services, TrafStats,  
+Western Systems and NW Signal sponsored the event. 
+ 
+Speaker Appreciation Gifts: 
+It is the Oregon Section’s tradition to recognize the speaker a t the Monthly Section Meetings and
+
+ ------------HDR, IBI Group, JRH Engineering, Kittelson and Associates, Lancaste r Engineering, NWS Traffic 
+Engineering, Parametrix, Quality Counts, TrafStats, URS Corp, W&H Pacific, and Western Systems.  
+The Oregon Section has already secured the room for Traffic Bowl  2008 (November, 2008) at 
+McMenamin’s Edgefield. 
+ 
+This year, students continued to enjoy substantial discounts at  Oregon ITE Section meetings ranging 
+from free (Traffic Bowl) to $5 (Section Meetings) depending on t he actual cost of the event and level 
+of corporate sponsorship.",Correct,"The answer provides detailed information about the 18th annual ITE Golf Tournament, including the host, location, date, number of competitors, and sponsors. It is well-written and demonstrates a good understanding of the event."
+What are the standard rules of a golf game?,I don't know.,"Portland, this year’s golf tournament was held in 
+late summer.  We had good turn out and good 
+corporate sponsorship donations.  Oregon Golf 
+Association 
+(OGA) Golf 
+Course, 
+Woodburn, OR  57 
+9-25-07 September 
+Meeting  Jim Peters (DKS Associates) and Jay McCoy (City 
+of Gresham) gave a presentation on the use of recen t 
+SCATS Adaptive Traffic Signal System in City of 
+Gresham, Oregon.   Kells Irish Pub 
+Portland, OR 56 
+10-23-07 October 
+Meeting Senator Rick Metsger, Chairman of the Senate 
+Transportation Committee, discussed about 
+congestion pricing and his “Moving Oregon” 
+statewide transportation tour, and effort to build 
+support for major investment in Oregon’s 
+transportation system. Hotel Monaco, 
+Portland, OR 73 
+11-15-07 2007 Student 
+Traffic Bowl Oregon ITE 16 th  Annual Student Traffic Bowl 
+competition featured six universities from around 
+the northwest.  This year’s 1 st  place prize went to 
+University of Portland, while University of
+
+ ------------Intelligent Systems pp. 22–31.
+Kim, G. & Markowitz, H. (1989), ‘Investment rules, margin, and market volatility’, Journal of Portfolio
+Management 16(1), 45–52.
+Kirman, A. P. (1991), Epidemics of opinion and speculative bubbles in ﬁnancial markets, inM. Taylor, ed.,
+‘Money and Financial Markets’, Macmillan, London.
+49",Incorrect,The answer provided does not address the question and shows a lack of knowledge on the topic.
+How do you think the token gifts motivate the speakers?,"The token gifts, such as USB thumb drives and handmade coffee mugs, serve as a form of recognition and appreciation for the speakers. These gifts can motivate the speakers by showing that their contributions are valued and acknowledged by the event sponsors. The act of presenting token gifts can also create a positive and encouraging atmosphere for the speakers, potentially boosting their motivation to participate in future events.","Western Systems and NW Signal sponsored the event. 
+ 
+Speaker Appreciation Gifts: 
+It is the Oregon Section’s tradition to recognize the speaker a t the Monthly Section Meetings and 
+various other guests of the Section by presenting them with a token gift. USB thumb drives printed 
+with an Oregon ITE logo were purchased as speaker gifts this year, as were handmade coffee mugs 
+with the Oregon ITE logo. 
+ 
+District 6 Meeting - Local Arrangements Committee: 
+The Oregon Section helped arrange the 2007 District 6 (now Western District) m eeting that was held 
+July 15 to 18 in Portland.  This meeting was combined with the Quad Conference to expand  the reach 
+of this event to our friends in Vancouver, BC. The Quad meeting was originally s cheduled to take 
+place in 2008 in Portland, but the Oregon Section swapped meeting years with the  Vancouver Island 
+Section in order to better coordinate the district and quad meetings (a w in-win situation for both 
+Sections).
+
+ ------------balances in the two currencies. Nominal currency supplies are given, so this determines the price level in
+each currency. This setup avoids some of the complexities that appear in other papers in ﬁnding prices.
+The evolution of strategies is similar to Lettau (1997). The ﬁtness of a strategy is determined by its
+ex post utility, and a new population is drawn using ﬁtness proportional selection. Agents are paired, and
+a crossover operator is applied to each pair with a given probability generating two new children. When
+crossover is not used, the children are direct copies of the parents. These children are then mutated by
+ﬂipping bits with a certain probability. The ﬁtness of the new rules is then estimated by implementing them
+on the previous round of prices and returns. At this point all four of the children and parents are grouped
+16",Correct,The answer provides a clear explanation of how token gifts motivate the speakers by recognizing and appreciating their contributions. It also mentions how the act of presenting token gifts can create a positive atmosphere and potentially boost motivation for future events.
+How was the District 6 meeting a huge success?,"The District 6 meeting was a huge success with over 500 attendees and a well-organized event by the committee chaired by Peter Koonce. The meeting included technical sessions, poster sessions, and sponsorships from Western Systems and NW Signal. Speaker appreciation gifts were also given out as a tradition of the Oregon Section.","Section in order to better coordinate the district and quad meetings (a w in-win situation for both 
+Sections). 
+The District 6 meeting was a huge success in that it attracted over 500 at tendees. The committee, 
+chaired by Peter Koonce, was responsible for setting up a great techni cal and social event for the 
+members of District 6. Some of the highlights include: 
+/crosstar2 PTOE/PTP/TSOS/TOPS Exam Offering 
+/crosstar2 James H. Kell Student Competition 
+/crosstar2 36 Technical Sessions 
+/crosstar2 2 Poster Sessions
+
+ ------------Western Systems and NW Signal sponsored the event. 
+ 
+Speaker Appreciation Gifts: 
+It is the Oregon Section’s tradition to recognize the speaker a t the Monthly Section Meetings and 
+various other guests of the Section by presenting them with a token gift. USB thumb drives printed 
+with an Oregon ITE logo were purchased as speaker gifts this year, as were handmade coffee mugs 
+with the Oregon ITE logo. 
+ 
+District 6 Meeting - Local Arrangements Committee: 
+The Oregon Section helped arrange the 2007 District 6 (now Western District) m eeting that was held 
+July 15 to 18 in Portland.  This meeting was combined with the Quad Conference to expand  the reach 
+of this event to our friends in Vancouver, BC. The Quad meeting was originally s cheduled to take 
+place in 2008 in Portland, but the Oregon Section swapped meeting years with the  Vancouver Island 
+Section in order to better coordinate the district and quad meetings (a w in-win situation for both 
+Sections).",Correct,"The answer provides specific details about the District 6 meeting, including the number of attendees, the organization of the event, the sessions and sponsorships involved, and the tradition of speaker appreciation gifts. Well done."
+Which award was granted over the past year? To whom was it given?,The Traffic Bowl - First Place Award was granted over the past year. It was given to the University of Portland. The purpose of the award was to encourage student participation in the Oregon Section ITE.,"Oregon Section 2007/2008 Annual Report  
+Institute of Transportation Engineers  Page 13 of 1 3  
+9.   AWARDS                             
+ 
+The Oregon Section recognized several groups and individuals during 2007-08. The Section provided 
+over $1,450 in awards to various ITE Student Sections throughout the gr eater Northwest. The awards 
+granted over the past year are summarized below. 
+ 
+Award Name: Traffic Bowl - First Place Award   
+Recipient's Name:  University of Portland 
+Purpose of Award:  To Encourage Student Participation in Oregon Section ITE 
+Form of Award:  $400 to Student Chapter
+
+ ------------/square4 University of Washington 
+/square4 Oregon Institute of Technology 
+ 
+University of Portland took home the grand prize of bragging rights , a trophy and a $400 scholarship 
+award. University of Washington and Oregon Institute of Technology  both received $300 for tying 
+for second place.  The remaining three participating schools rec eived a $150 participation award.  All 
+of the student attendees received a free dinner at this ev ent. In order to offset the cost of the student 
+meals and scholarships, several local companies donated funds to  support student attendance. 
+Donations were received from: Advanced Traffic Products, CH2M Hil l, City of Gresham, City of 
+Portland, Coral Sales Company, David Evans and Associates, DKS As sociates, Group Mackenzie, 
+HDR, IBI Group, JRH Engineering, Kittelson and Associates, Lancaste r Engineering, NWS Traffic 
+Engineering, Parametrix, Quality Counts, TrafStats, URS Corp, W&H Pacific, and Western Systems.",Incorrect,"The answer provided is partially correct as it mentions the award granted over the past year, but it does not address the second part of the question regarding who it was given to. Additionally, the response includes unnecessary details about the purpose of the award which is not relevant to the question."
+How do you think sexual harassment as an issue is peculiar to Australian workplaces?,Sexual harassment in Australian workplaces persists despite legislation prohibiting it since 1984. The current legislative scheme places the burden on victims to seek redress rather than obligating employers to prevent harassment. Victims must make a complaint before pursuing a remedy under the current system.,"Maurice Blackburn Lawyers submission to the National Inquiry into Sexual Harassment in Australian Workplaces . 
+Page 7 
+  
+i. Positive obligation on employers  
+ 
+Sexual harassment in the workplace has been prohibited in Australia since the passing of the 
+Sex Discrimination Act 1984  (Cth) (‘ SDA ’). However, the persistent prevalence of sexual 
+harassment within Australian workplaces since that time suggests that the current legislation 
+has failed in preventing this kind of conduct.  
+ 
+Maurice Blackburn is of the view that one of the significant failings of the current legislative 
+scheme is the onus it places on victims to seek redress for the harm they have suffered, 
+rather than placing a positive obligation on employers to prevent the harm occurring in the 
+first instance.   
+ 
+The current legislative scheme requires victims of sexual harassment to take the step of 
+making a complaint before they are able to pursue a remedy in relation to the unlawful
+
+ ------------Submission in Response 
+to the National Inquiry into 
+Sexual Harassment in 
+Australian Workplaces  
+ 
+ 
+February 2019",Correct,The answer provides a clear explanation of how sexual harassment persists in Australian workplaces despite legislation. It correctly highlights the burden on victims to seek redress and the lack of obligation on employers to prevent harassment.
+What legislative suggestions pertaining to workplace sexual harassment does the firm provide in its submission?,Maurice Blackburn Lawyers' submission includes legislative suggestions for workplace sexual harassment reforms. They facilitated discussions with professionals in employment law and industrial relations to formulate these suggestions. The submission explores key themes and refers to other organizations' submissions for more detailed information.,"Submission in Response 
+to the National Inquiry into 
+Sexual Harassment in 
+Australian Workplaces  
+ 
+ 
+February 2019
+
+ ------------Maurice Blackburn Lawyers submission to the National Inquiry into Sexual Harassment in Australian Workplaces . 
+Page 3 
+ union officials, politicians, barristers and labour l awyers, to facilitate a discussion about the 
+most effective legislative reforms to secure justice for victims of sexual harassment. These 
+round table discussions allowed Maurice Blackburn to draw from the knowledge of other 
+highly experienced professionals  working in employment law and industrial relations, in 
+formulating this submission.  
+ 
+These key themes are explored in more detail in the following pages. We also refer the 
+AHRC to the joint statement submitted by over 100 organisations including Maurice 
+Blackburn and the submission to this inquiry from Women Lawyers NSW, which addresses 
+some of these matters in more detail (and with which representatives of Maurice Blackburn 
+have been involved).  
+ 
+Maurice Blackburn Responses to Terms of Reference.",Correct,The answer provides a clear and concise explanation of Maurice Blackburn Lawyers' submission including legislative suggestions for workplace sexual harassment reforms. It also mentions the process involved in formulating these suggestions and how the submission refers to other organizations' submissions for more detailed information.
+How does the scarcity of data on mediations impact the efficacy of the Complaints Process?,"The scarcity of data on mediations impacts the efficacy of the Complaints Process by limiting the understanding of outcomes in anti-discrimination and sexual harassment matters. Without sufficient data, it is challenging to assess the effectiveness of mediations and make informed decisions on improving the process. This lack of information hinders the ability to address issues and ensure a just result for complainants.","that statutory caps on damages under state legislation should be abolished to reflect the 
+federal jurisdiction.  
+ 
+vi. The Complaints Process  
+ 
+In addition to the limitations of the statu tory framework set out above, from our experience, 
+the Individual Complaints System itself can be ineffective at achieving a just result for 
+complainants.  
+ 
+Our primary and overriding submission in relation to the Individual Complaints System is that 
+it is paramount that the AHRC be properly funded and fully staffed in order to fulfil its 
+statutory objectives.  
+ 
+Below we have identified three additional issues which impact the efficacy of the Complaints 
+Process. They are related to:  
+ 
+ Scarcity of data on med iations;  
+ Employer tactics ; and  
+ The mediation process  
+ 
+These are discussed in more detail below:  
+ 
+Scarcity of Data  on Mediations  
+ 
+It should be noted that there have been very few Australian studies which have examined
+
+ ------------ The mediation process  
+ 
+These are discussed in more detail below:  
+ 
+Scarcity of Data  on Mediations  
+ 
+It should be noted that there have been very few Australian studies which have examined 
+the outcomes of the mediation  process with respect to anti -discrimination matters, and 
+even less with respect to sexual harassment matters specifically. This is largely due to 
+                                                
+19 Therese  MacDermott  (2015) ‘Reassessing Sexual Harassment: It's time’ Alternative Law Journal , 40(3), 157.  
+20 Harassment compensation caps outdated in #MeToo era",Correct,"The answer provides a clear explanation of how the scarcity of data on mediations impacts the efficacy of the Complaints Process. It highlights the importance of data in assessing effectiveness and making informed decisions to improve the process. Additionally, it emphasizes how the lack of information hinders the ability to address issues and ensure a just result for complainants."
+What and why the firm designates as one of the significant failings of the current legislative scheme?,"One of the significant failings of the current legislative scheme, as designated by the firm, is the onus it places on victims to seek redress rather than obligating employers to prevent harm. The firm believes there should be enforceable sanctions against employers who fail to provide a safe workplace. They also emphasize the importance of reporting incidents of sexual harassment to the Workplace Gender Equality Agency.","available to victims.  
+ 
+The impacts on victims can be life long and life changing.  
+ 
+Maurice Blackburn is of the view that one of the signif icant failings of the current legislative 
+scheme is the onus it places on victims to seek redress for the harm they have suffered, 
+rather than placing a positive obligation on employers to prevent the harm occurring in the 
+first instance. We believe there should be enforceable sanctions against employers who fail 
+in their duty to provide a safe workplace for their employees.  
+ 
+We believe that it is important that the governing bodies of all organisations should be fully 
+aware of the incidence of sexual haras sment in their workplace, and that they should be 
+required to report on the number of reported incidents of sexual harassment, as part of their 
+reporting requirements to Workplace Gender Equality Agency (‘WGEA’).  
+ 
+We believe that the current legislated tim eframe for making a complaint through AHRC is
+
+ ------------that statutory caps on damages under state legislation should be abolished to reflect the 
+federal jurisdiction.  
+ 
+vi. The Complaints Process  
+ 
+In addition to the limitations of the statu tory framework set out above, from our experience, 
+the Individual Complaints System itself can be ineffective at achieving a just result for 
+complainants.  
+ 
+Our primary and overriding submission in relation to the Individual Complaints System is that 
+it is paramount that the AHRC be properly funded and fully staffed in order to fulfil its 
+statutory objectives.  
+ 
+Below we have identified three additional issues which impact the efficacy of the Complaints 
+Process. They are related to:  
+ 
+ Scarcity of data on med iations;  
+ Employer tactics ; and  
+ The mediation process  
+ 
+These are discussed in more detail below:  
+ 
+Scarcity of Data  on Mediations  
+ 
+It should be noted that there have been very few Australian studies which have examined",Correct,The student accurately identifies that one of the significant failings of the current legislative scheme is the onus it places on victims to seek redress rather than obligating employers to prevent harm. The student also correctly mentions the firm's belief in enforceable sanctions against employers who fail to provide a safe workplace and the importance of reporting incidents of sexual harassment to the Workplace Gender Equality Agency.
+In what cases should online sexual harassment be criminalized according to the submission?,"Online sexual harassment should be criminalized in cases where there are particularly nefarious behaviors involved, and when individuals engage in threatening or harassing behavior through online platforms. It is important to hold not only the perpetrators accountable but also employers, social media platforms, and those who generate and distribute abusive material. Given the scope of online sexual harassment, a legislative framework should include both criminal sanctions and a civil process for victims to seek relief and damages."," The perception that ‘the rules are different on -line’. Threats or harassment made on -
+line seem to be held to a different standard of accountability than if they were made 
+via any other mechanism. Some of the current academic work around ‘online 
+disinhibiti on’ is worthy of exploration.  
+ 
+We have long argued that a legislative framework is needed which incorporates:  
+ 
+ Regulation and criminal sanctions holding the behaviours of abusers, employers and 
+carriage services to account, and  
+ 
+ A civil regime through which victims and survivors of online abuse can access legal 
+tools to allow them to seek relief and damages.  
+ 
+This will necessitate criminalising particularly nefarious behaviours, and then providing the 
+relevant police and regulatory services with the res ources to successfully prosecute people 
+engaging in sexual harassment through on -line platforms.  
+ 
+We believe that, for this to have the required deterrent effect, it is important that all those who
+
+ ------------engaging in sexual harassment through on -line platforms.  
+ 
+We believe that, for this to have the required deterrent effect, it is important that all those who 
+cause, enable or expose people to on -line sexual harassmen t should be held to account, and 
+this includes employers, and social media platforms, as well as those who generate and 
+distribute the abusive material.  
+ 
+We recognise, however, that given the scope and pervasiveness of on -line sexual 
+harassment, no regulat or or law enforcement agency, no matter how well equipped, will be in 
+a position to effectively deal with every case, let alone every extreme case. Hence the need 
+for a concurrent civil process which provides citizens with the tools required to achieve 
+appropriate redress.  
+ 
+Maurice Blackburn believes Australia needs a civil  / criminal legislative framework which 
+could ensure:  
+ 
+ That breache s, can be  investigated by a statutory body established under the Act, 
+and failing that, the courts.",Correct,"The student provided a comprehensive answer outlining the criteria for criminalizing online sexual harassment, including nefarious behaviors, threatening or harassing behavior, accountability of perpetrators, employers, and social media platforms, as well as the need for a legislative framework encompassing criminal sanctions and civil process for victims."
